@@ -33,25 +33,25 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/btnRed"
+            android:id="@+id/botonRojo"
             android:text="Rojo"
             android:backgroundTint="@android:color/holo_red_light"
             android:layout_margin="4dp" />
 
         <Button
-            android:id="@+id/btnGreen"
+            android:id="@+id/botonVerde"
             android:text="Verde"
             android:backgroundTint="@android:color/holo_green_light"
             android:layout_margin="4dp" />
 
         <Button
-            android:id="@+id/btnBlue"
+            android:id="@+id/botonAzul"
             android:text="Azul"
             android:backgroundTint="@android:color/holo_blue_light"
             android:layout_margin="4dp" />
 
         <Button
-            android:id="@+id/btnYellow"
+            android:id="@+id/botonAmarillo"
             android:text="Amarillo"
             android:backgroundTint="@android:color/holo_orange_light"
             android:layout_margin="4dp" />

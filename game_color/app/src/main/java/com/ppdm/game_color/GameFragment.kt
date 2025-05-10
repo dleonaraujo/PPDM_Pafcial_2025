@@ -21,8 +21,8 @@ class GameFragment : Fragment() {
     private var score = 0
     private var currentColor = 0
 
-    private lateinit var correctSound: MediaPlayer
-    private lateinit var wrongSound: MediaPlayer
+    private lateinit var sonidoGanar: MediaPlayer
+    private lateinit var sonidoPerder: MediaPlayer
 
     private val colors = listOf(Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW)
     private val colorNames = listOf("Rojo", "Verde", "Azul", "Amarillo")
@@ -36,13 +36,13 @@ class GameFragment : Fragment() {
         scoreText = view.findViewById(R.id.scoreText)
         timerText = view.findViewById(R.id.timerText)
 
-        correctSound = MediaPlayer.create(requireContext(), R.raw.correct)
-        wrongSound = MediaPlayer.create(requireContext(), R.raw.wrong)
+        sonidoGanar = MediaPlayer.create(requireContext(), R.raw.ganar)
+        sonidoPerder = MediaPlayer.create(requireContext(), R.raw.perder)
 
-        view.findViewById<Button>(R.id.btnRed).setOnClickListener { checkAnswer(Color.RED) }
-        view.findViewById<Button>(R.id.btnGreen).setOnClickListener { checkAnswer(Color.GREEN) }
-        view.findViewById<Button>(R.id.btnBlue).setOnClickListener { checkAnswer(Color.BLUE) }
-        view.findViewById<Button>(R.id.btnYellow).setOnClickListener { checkAnswer(Color.YELLOW) }
+        view.findViewById<Button>(R.id.botonRojo).setOnClickListener { checkAnswer(Color.RED) }
+        view.findViewById<Button>(R.id.botonVerde).setOnClickListener { checkAnswer(Color.GREEN) }
+        view.findViewById<Button>(R.id.botonAzul).setOnClickListener { checkAnswer(Color.BLUE) }
+        view.findViewById<Button>(R.id.botonAmarillo).setOnClickListener { checkAnswer(Color.YELLOW) }
 
         startGame()
     }
@@ -74,9 +74,9 @@ class GameFragment : Fragment() {
     private fun checkAnswer(colorPressed: Int) {
         if (colorPressed == currentColor) {
             score++
-            correctSound.start()
+            sonidoGanar.start()
         } else {
-            wrongSound.start()
+            sonidoPerder.start()
         }
         updateScore()
         showRandomColor()
@@ -89,7 +89,7 @@ class GameFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         countDownTimer.cancel()
-        correctSound.release()
-        wrongSound.release()
+        sonidoGanar.release()
+        sonidoPerder.release()
     }
 }
