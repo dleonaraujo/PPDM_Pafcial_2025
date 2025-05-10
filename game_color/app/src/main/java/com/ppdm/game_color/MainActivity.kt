@@ -16,5 +16,7 @@ import com.ppdm.game_color.ui.theme.Game_colorTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
     }
 }
+
