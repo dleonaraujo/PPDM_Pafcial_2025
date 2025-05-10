@@ -5,8 +5,8 @@
 
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.tuapp.fragments.WelcomeFragment"
-        android:label="Bienvenido" >
+        android:name="com.ppdm.game_color.WelcomeFragment"
+        android:label="Bienvenido">
         <action
             android:id="@+id/action_welcome_to_game"
             app:destination="@id/gameFragment" />
@@ -14,8 +14,8 @@
 
     <fragment
         android:id="@+id/gameFragment"
-        android:name="com.tuapp.fragments.GameFragment"
-        android:label="Juego" >
+        android:name="com.ppdm.game_color.GameFragment"
+        android:label="Juego">
         <action
             android:id="@+id/action_game_to_result"
             app:destination="@id/resultFragment" />
@@ -23,12 +23,14 @@
 
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.tuapp.fragments.ResultFragment"
-        android:label="Resultados" >
+        android:name="com.ppdm.game_color.ResultFragment"
+        android:label="Resultados">
+        <argument
+            android:name="score"
+            app:argType="integer" />
         <action
             android:id="@+id/action_result_to_welcome"
             app:destination="@id/welcomeFragment" />
     </fragment>
 
 </navigation>
-
