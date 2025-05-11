@@ -1,9 +1,6 @@
 package com.ppdm.game_color
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.navigation.fragment.NavHostFragment
 import androidx.fragment.app.FragmentActivity
 
 

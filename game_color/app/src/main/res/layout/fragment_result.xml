@@ -5,6 +5,8 @@
 
     <TextView
         android:id="@+id/TextoPuntaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Puntaje: 0"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -12,12 +14,16 @@
 
     <TextView
         android:id="@+id/TextoMensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="¡Bien hecho!"
         android:textSize="20sp"
         android:layout_marginBottom="10dp" />
 
     <TextView
         android:id="@+id/TextoPuntajeAlto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Puntaje más alto: 0"
         android:textSize="16sp"
         android:layout_marginBottom="20dp" />
