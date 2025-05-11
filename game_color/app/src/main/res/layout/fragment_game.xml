@@ -21,10 +21,10 @@
 
     <View
         android:id="@+id/colorView"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginBottom="30dp"
-        android:background="#FFFFFF" />
+        android:background="#FF0000" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -34,24 +34,31 @@
 
         <Button
             android:id="@+id/botonRojo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Rojo"
             android:backgroundTint="@android:color/holo_red_light"
             android:layout_margin="4dp" />
 
         <Button
             android:id="@+id/botonVerde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Verde"
-            android:backgroundTint="@android:color/holo_green_light"
+            android:backgroundTint="@android:color/holo_orange_light"
             android:layout_margin="4dp" />
 
         <Button
             android:id="@+id/botonAzul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Azul"
             android:backgroundTint="@android:color/holo_blue_light"
             android:layout_margin="4dp" />
-
         <Button
             android:id="@+id/botonAmarillo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Amarillo"
             android:backgroundTint="@android:color/holo_orange_light"
             android:layout_margin="4dp" />
